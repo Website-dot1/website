@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Goods – Cool Stuff, Delivered</title>
+  <meta name="description" content="Nova Goods is an online store with fun, useful gadgets and gifts delivered to your door.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#" class="logo">✦ Nova Goods</a>
+    <nav>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <span class="cart">🛒 <span id="cart-count">0</span></span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Cool stuff, delivered.</h1>
+    <p>Fun gadgets, gifts and everyday essentials, shipped straight to your door.</p>
+    <a href="#products" class="btn">Shop now</a>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Best sellers</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="img" style="background:#ffe3e3">🌙</div>
+        <h3>Galaxy Night Light</h3>
+        <p>Projects stars across your ceiling.</p>
+        <div class="price">$29.99</div>
+        <button onclick="addToCart(this)">Add to cart</button>
+      </div>
+      <div class="card">
+        <div class="img" style="background:#e3f2ff">🎧</div>
+        <h3>Wireless Earbuds</h3>
+        <p>Clear sound with a 24-hour battery case.</p>
+        <div class="price">$39.99</div>
+        <button onclick="addToCart(this)">Add to cart</button>
+      </div>
+      <div class="card">
+        <div class="img" style="background:#e6ffe8">🪴</div>
+        <h3>Self-Watering Planter</h3>
+        <p>Keeps your plants happy for weeks.</p>
+        <div class="price">$19.99</div>
+        <button onclick="addToCart(this)">Add to cart</button>
+      </div>
+      <div class="card">
+        <div class="img" style="background:#fff5d6">💡</div>
+        <h3>LED Strip Lights</h3>
+        <p>16 colours, controlled from your phone.</p>
+        <div class="price">$24.99</div>
+        <button onclick="addToCart(this)">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About us</h2>
+    <p>We find fun, useful products and ship them to you fast. Every order comes with free shipping over $50 and a 30-day money-back guarantee.</p>
+    <div class="perks">
+      <div>🚚<br><strong>Free shipping</strong><br>on orders over $50</div>
+      <div>↩️<br><strong>30-day returns</strong><br>no questions asked</div>
+      <div>🔒<br><strong>Secure checkout</strong><br>safe and simple</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact us</h2>
+    <p>Questions? We'd love to hear from you.</p>
+    <form onsubmit="event.preventDefault(); alert('Thanks! This is a demo, so the message was not sent.');">
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+      <textarea placeholder="Your message" rows="4" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 Nova Goods · This is an example store
+  </footer>
+
+  <script>
+    let count = 0;
+    function addToCart(button) {
+      count++;
+      document.getElementById('cart-count').textContent = count;
+      button.textContent = 'Added ✓';
+      setTimeout(() => button.textContent = 'Add to cart', 1200);
+    }
+  </script>
+</body>
+</html>
